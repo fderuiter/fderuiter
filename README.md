@@ -14,9 +14,6 @@ My background includes research at Mayo Clinic, clinical database work at BRIGHT
 | --- | --- |
 | [imednet-toolkit](https://github.com/fderuiter/imednet-toolkit) | Unofficial Python SDK and CLI for the iMednet clinical trials API. |
 | [QRCraftly](https://qrcraftly.com) | Create, style, and scan QR codes in your browser. Screen-to-camera file transfer is in beta. |
-| [Equipose](https://equipose.org) | Design, simulate, and export clinical trial randomization schemes. |
-| [CRF.xl](https://github.com/fderuiter/CRF.xl) | Build clinical forms in Excel; export Word documents and CDISC ODM. |
-| [fred-skills](https://github.com/fderuiter/fred-skills) | Experimental workflows for investigating repositories and checking fixes. |
 | [deruiter.dev](https://deruiter.dev) | Clinical demos with fictional studies, interactive labs, and [games](https://deruiter.dev/arcade). |
 
 [More projects, including the Rust, Lean, and Flipper Zero experiments →](PROJECTS.md)
