@@ -9,7 +9,7 @@ These are copy-ready suggestions. Updating this repository does not change GitHu
 | Field | Suggested value |
 | --- | --- |
 | Name | Fred de Ruiter |
-| Bio | Clinical data specialist building useful software. Python, TypeScript, Rust, and curious side projects. Creator of Laser Loon. |
+| Bio | Clinical data, useful software, and Laser Loon. Minneapolis. Usually building something; occasionally buying it in bulk. |
 | Location | Minneapolis, Minnesota |
 | Website | https://deruiter.dev |
 | Social link | https://www.linkedin.com/in/frederick-de-ruiter-88012467/ |
@@ -37,6 +37,12 @@ Reviewed November 16, 2026. The GitHub metadata review covered 38 public reposit
 | Project summaries and maturity qualifications | Each linked repository’s README; GitHub metadata for fork identity and upstream parent |
 
 The introduction uses public biographical material and project documentation. It avoids private repository names, personal contact details absent from the portfolio, unverified impact metrics, clinical approval claims, and optical-transfer throughput promises. Descriptions summarize documented scope; this profile review did not validate the implementations of the other repositories.
+
+## Writing voice
+
+Keep the profile short enough to read in one sitting, around 300 words. Use direct first-person language, contractions, specific projects, and occasional dry asides. Let the humor come from Fred’s actual interests: Laser Loon, Ducky, Costco, and the unusual career route. Keep project descriptions factual and put the wider inventory in `PROJECTS.md`.
+
+The November 16 rewrite draws on the structure, plain-language, and meaning-preservation ideas in [Lynote’s rewriting techniques](https://github.com/lynote-ai/humanize-text/blob/main/docs/techniques.md). Those ideas were applied directly during editing; the external API and translation pipeline was not run. No detector score was used as a quality claim.
 
 ## Keeping it useful
 
