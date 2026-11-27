@@ -8,6 +8,7 @@ My public work spans clinical research, web applications, developer tools, mathe
 
 | Project | What you’ll find |
 | --- | --- |
+| [Cadence](https://github.com/fderuiter/cadence-clinical) | A pre-release operating system for clinical research in .NET 10 and Vue: one clinical kernel, with EDC, site readiness, randomization, and other products built as applications on it. [Try the staff demo](https://fderuiter.github.io/cadence-clinical/demo/) with synthetic data. Not validated for real trials. |
 | [imednet-toolkit](https://github.com/fderuiter/imednet-toolkit) | Unofficial Python SDK, CLI, typed API wrappers, and helper workflows for iMednet. |
 | [CRF.xl](https://github.com/fderuiter/CRF.xl) | Excel-based case report form authoring, metadata validation, Word generation, and CDISC ODM export. |
 | [Equipose](https://github.com/fderuiter/equipose-randomization) | Browser-based stratified block randomization design, simulation, and export. [Open the app](https://equipose.org). |
@@ -26,7 +27,7 @@ For a hands-on introduction, the [clinical journey on my portfolio](https://deru
 | [QRCraftly-web](https://github.com/fderuiter/QRCraftly-web) | QR generation, styling, scanning, and checking in the browser, plus beta optical file transfer. [Open the app](https://qrcraftly.com). Advanced transfer speeds remain simulation results pending device measurements. |
 | [deruiter.dev](https://github.com/fderuiter/deruiter.dev) | My portfolio source, clinical demos, interactive labs, and [browser games](https://deruiter.dev/arcade). |
 | [sortify](https://github.com/fderuiter/sortify) | A local document organizer with rule-based routing, content clustering, dry runs, and undo. Currently run from source; its README reports no published release yet. |
-| [wedding_website](https://github.com/fderuiter/wedding_website) | A customizable wedding website and registry. Currently undergoing maintenance and refactoring. |
+| [wedding_website](https://github.com/fderuiter/wedding_website) | A self-hostable wedding website and registry: invitation-code RSVPs, seating charts, guest photo moderation, group gifting, and scheduled broadcasts. [Tour the demo](https://fderuiter.github.io/wedding_website/demo/). |
 | [sharepoint_upload_cleaning](https://github.com/fderuiter/sharepoint_upload_cleaning) | A Python filename cleaner for preparing SharePoint uploads. |
 
 ## Engineering workflows and starters
@@ -43,7 +44,7 @@ For a hands-on introduction, the [clinical journey on my portfolio](https://deru
 
 | Project | What you’ll find |
 | --- | --- |
-| [OxidizeMath](https://github.com/fderuiter/OxidizeMath) | A Rust mathematics and simulation playground with an egui interface for exploring topics including MRI, fluids, and chaos. |
+| [OxidizeMath](https://github.com/fderuiter/OxidizeMath) | A Rust mathematics and simulation playground with an egui interface for exploring topics including MRI, fluids, and chaos. Modules carry Experimental, Validated, or Certified maturity labels. [Run it in your browser](https://fderuiter.github.io/OxidizeMath/). |
 | [quasiperfect](https://github.com/fderuiter/quasiperfect) | Lean 4 formalization, a Rust search prototype, Python tooling, and research notes on quasiperfect numbers. Selected arithmetic routines have proof bridges; the search is incomplete and does not settle the open problem. |
 | [JIBLM DIY Intro Number Theory](https://github.com/fderuiter/JIBLM_DIY_INTRO_NUMBER_THEORY) | Learning Lean by formalizing exercises from an inquiry-based number theory text. |
 | [Arithmetic dynamical systems](https://github.com/fderuiter/Asymptotic-Density-of-Attracting-Sets-in-Generalized-Arithmetic-Dynamical-Systems) | Exploratory Lean and mathematical writing on generalized arithmetic dynamical systems. Treat the repository’s broader research claims as claims to examine, rather than established results. |
@@ -78,4 +79,4 @@ These repositories are forks of other people’s work. Their presence on my acco
 | [veeva-vault-python-pydanticV1-sdk](https://github.com/fderuiter/veeva-vault-python-pydanticV1-sdk) | [Bright-Research/veeva-vault-python-pydanticV1-sdk](https://github.com/Bright-Research/veeva-vault-python-pydanticV1-sdk) |
 | [rust-template](https://github.com/fderuiter/rust-template) | [rust-github/template](https://github.com/rust-github/template) |
 
-This guide covers the 27 public, non-fork projects other than this profile repository, plus 10 GitHub-designated forks, reviewed on November 16, 2026. See each project’s current documentation as it evolves.
+This guide covers 28 public, non-fork projects other than this profile repository, plus 10 GitHub-designated forks. It was reviewed on November 16, 2026, with Cadence, OxidizeMath, and the wedding website refreshed on November 27, 2026. See each project’s current documentation as it evolves.
