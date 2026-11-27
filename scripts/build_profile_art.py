@@ -13,6 +13,8 @@ Edit the PROJECTS list below to change a card's text.
 from __future__ import annotations
 
 import base64
+import math
+import re
 from html import escape
 from pathlib import Path
 
@@ -135,6 +137,98 @@ def banner(theme: str) -> str:
 </svg>"""
 
 
+# --------------------------------------------------------------------------- Laser Loon
+
+LOON_SRC = ASSETS / "src" / "laser-loon.svg"  # Fred's CC0 artwork from fderuiter/Laser_Loon
+LOON_BLUE, LOON_YELLOW = "#0156d9", "#fdf98b"
+EYE = (762.04, 288.11)  # the loon's eye, where the lasers start
+HIT = (1100, 440)       # where the beams land on the fish
+
+
+def loon_parts() -> dict[str, str]:
+    """Split the flag artwork into the pieces that move separately."""
+    src = LOON_SRC.read_text(encoding="utf-8")
+    elements = re.findall(r"<(?:path|rect|circle)\b[^>]*/>", src)
+    colors = {"cls-1": LOON_BLUE, "cls-2": "#fff", "cls-3": LOON_YELLOW}
+
+    def paint(el: str) -> str:
+        m = re.search(r'class="(cls-\d)"', el)
+        fill = colors[m.group(1)] if m else "#000"
+        return re.sub(r'\s*class="cls-\d"', "", el).replace("/>", f' fill="{fill}"/>')
+
+    els = [paint(e) for e in elements]
+    # Index ranges follow the element order in the source file (checked by hand):
+    # 0 background, 1-5 fish, 6-7 loon body, 8 eye, 9-161 loon markings,
+    # 162 fish eye, 163 laser beams.
+    assert len(els) == 164, f"unexpected Laser Loon artwork: {len(els)} elements"
+    return {
+        "fish": "".join(els[1:6]) + els[162],
+        "loon": "".join(els[6:8]) + "".join(els[9:162]),
+        "eye": els[8],
+        "lasers": els[163],
+    }
+
+
+LOON_CSS = f"""
+  @keyframes bob {{ 0%, 100% {{ transform: translateY(0); }} 50% {{ transform: translateY(10px); }} }}
+  @keyframes fire {{ 0%, 8% {{ transform: scale(0); opacity: 0; }} 14% {{ transform: scale(1); opacity: 1; }}
+    18% {{ opacity: .55; }} 22% {{ opacity: 1; }} 26% {{ opacity: .7; }} 30% {{ opacity: 1; }}
+    44% {{ transform: scale(1); opacity: 1; }} 50%, 100% {{ transform: scale(1); opacity: 0; }} }}
+  @keyframes glow {{ 0%, 6% {{ transform: scale(1); opacity: .0; }} 14%, 44% {{ transform: scale(2.6); opacity: .55; }}
+    52%, 100% {{ transform: scale(1); opacity: 0; }} }}
+  @keyframes zap {{ 0%, 13% {{ transform: scale(0) rotate(0); opacity: 0; }} 18% {{ transform: scale(1.1) rotate(20deg); opacity: 1; }}
+    30% {{ transform: scale(.8) rotate(40deg); opacity: 1; }} 44% {{ transform: scale(1) rotate(60deg); opacity: .9; }}
+    50%, 100% {{ transform: scale(0) rotate(80deg); opacity: 0; }} }}
+  @keyframes dodge {{ 0%, 14% {{ transform: translate(0, 0); }} 17% {{ transform: translate(6px, -4px); }}
+    20% {{ transform: translate(-5px, 3px); }} 23% {{ transform: translate(4px, -2px); }} 26%, 44% {{ transform: translate(0, 0); }}
+    50% {{ transform: translate(14px, 0) rotate(-2deg); }} 70%, 100% {{ transform: translate(0, 0); }} }}
+  @keyframes drift {{ from {{ transform: translateX(0); }} to {{ transform: translateX(-240px); }} }}
+  .loon {{ animation: bob 4s ease-in-out infinite; }}
+  .lasers {{ transform-box: view-box; transform-origin: {EYE[0]}px {EYE[1]}px; animation: fire 3.2s infinite; }}
+  .glow {{ transform-box: view-box; transform-origin: {EYE[0]}px {EYE[1]}px; animation: glow 3.2s infinite; }}
+  .zap {{ transform-box: view-box; transform-origin: {HIT[0]}px {HIT[1]}px; animation: zap 3.2s infinite; }}
+  .fish {{ transform-box: view-box; transform-origin: 1300px 560px; animation: dodge 3.2s infinite; }}
+  .ripple {{ animation: drift 6s linear infinite; }}
+  @media (prefers-reduced-motion: reduce) {{
+    .loon, .lasers, .glow, .zap, .fish, .ripple {{ animation: none !important; }}
+    .glow, .zap {{ opacity: 0; }}
+  }}
+"""
+
+
+def loon_scene(ripples: bool = True) -> str:
+    """The flag artwork as animated layers, in the source's 1920x1080 coordinates."""
+    parts = loon_parts()
+    points = []
+    for k in range(16):  # an eight-pointed spark where the beams land
+        r = 46 if k % 2 == 0 else 16
+        points.append(f"{HIT[0] + r * math.cos(k * math.pi / 8):.1f},{HIT[1] + r * math.sin(k * math.pi / 8):.1f}")
+    star = " ".join(points)
+    waves = ""
+    if ripples:
+        wave = "".join(f"q30 -14 60 0 t60 0" for _ in range(20))
+        waves = (f'<g class="ripple" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="5" stroke-linecap="round">'
+                 f'<path d="M0 760 {wave}"/><path d="M120 820 {wave}"/><path d="M40 880 {wave}"/></g>')
+    return (
+        f'<rect width="1920" height="1080" fill="{LOON_BLUE}"/>{waves}'
+        f'<g class="fish">{parts["fish"]}</g>'
+        f'<g class="loon">{parts["loon"]}'
+        f'<g class="lasers">{parts["lasers"]}</g>'
+        f'<circle class="glow" cx="{EYE[0]}" cy="{EYE[1]}" r="13" fill="{LOON_YELLOW}"/>{parts["eye"]}</g>'
+        f'<polygon class="zap" points="{star}" fill="{LOON_YELLOW}"/>'
+    )
+
+
+def laser_loon() -> str:
+    return f"""
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1920 1080" role="img" aria-labelledby="title">
+  <title id="title">Laser Loon: a loon on a blue Minnesota flag fires yellow laser beams from its eye at a startled fish.</title>
+  <style>{LOON_CSS}</style>
+  <defs><clipPath id="flag"><rect width="1920" height="1080" rx="40"/></clipPath></defs>
+  <g clip-path="url(#flag)">{loon_scene()}</g>
+</svg>"""
+
+
 # --------------------------------------------------------------------------- project cards
 
 PROJECTS = [
@@ -174,11 +268,11 @@ PROJECTS = [
         "cta": "Run the live tutorial", "glyph": "terminal",
     },
     {
-        "slug": "equipose", "accent": ("#a5b4fc", "#4338ca"),
-        "label": "TRIAL RANDOMIZATION", "name": "Equipose",
-        "hook": ["Stratified block randomization, exported", "to R, Python, SAS and Stata."],
-        "chips": ["Angular", "TypeScript", "Web Workers"],
-        "cta": "Design a schema", "glyph": "scale",
+        "slug": "laser-loon", "accent": ("#facc15", "#0156d9"),
+        "label": "MINNESOTA FLAG REDESIGN", "name": "Laser Loon",
+        "hook": ["A loon with laser eyes, designed for the", "state flag and given to the public domain."],
+        "chips": ["CC0 1.0", "SVG · PNG · AI", "Arcade game"],
+        "cta": "Grab the artwork", "glyph": "loon",
     },
 ]
 
@@ -220,6 +314,10 @@ def glyph(kind: str, c: str) -> str:
                 f'<g class="tilt" style="transform-origin:512px 58px">'
                 f'<path d="M470 58l-14 30h28zM554 58l-14 30h28z" fill="none" stroke="{c}" stroke-width="3.5" stroke-linejoin="round"/></g>'
                 f'<circle cx="512" cy="42" r="6" fill="{c}"/>')
+    if kind == "loon":
+        return (f'<defs><clipPath id="mini"><rect width="1920" height="1080" rx="90"/></clipPath></defs>'
+                f'<svg x="400" y="30" width="170" height="96" viewBox="0 0 1920 1080">'
+                f'<g clip-path="url(#mini)">{loon_scene(ripples=False)}</g></svg>')
     raise ValueError(kind)
 
 
@@ -246,6 +344,7 @@ def card(p: dict, theme: str) -> str:
     .pulse {{ animation: pulse 2.4s ease-in-out infinite; }}
     .blink {{ animation: blink 1.1s step-end infinite; }}
     .tilt {{ animation: tilt 5s ease-in-out infinite; }}
+    {LOON_CSS if p["glyph"] == "loon" else ""}
     {REDUCED_MOTION}
   </style>
   <rect x="1" y="1" width="598" height="318" rx="18" fill="{t["bg"]}" stroke="{t["border"]}" stroke-width="2"/>
@@ -294,6 +393,7 @@ def portfolio(theme: str) -> str:
 
 
 def main() -> None:
+    write("laser-loon.svg", laser_loon())
     for theme in THEMES:
         write(f"banner-{theme}.svg", banner(theme))
         write(f"portfolio-{theme}.svg", portfolio(theme))

@@ -60,7 +60,7 @@ For a hands-on introduction, the [clinical journey on my portfolio](https://deru
 
 ## Art and community
 
-[Laser Loon](https://github.com/fderuiter/Laser_Loon) contains my Minnesota flag redesign artwork, released under CC0 for people to use, modify, and share. It also became a [game in my arcade](https://deruiter.dev/arcade).
+[Laser Loon](https://github.com/fderuiter/Laser_Loon) contains my Minnesota flag redesign artwork, released under CC0 for people to use, modify, and share. It also became a [game in my arcade](https://deruiter.dev/arcade), and you can buy it as a real flag from [Flags for Good](https://flagsforgood.com/products/laser-loon-minnesota-flag), where the proceeds go to charity.
 
 ## Forks and upstream projects
 
