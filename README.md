@@ -109,8 +109,8 @@ Sortify is a local document organizer. Point it at a folder like Downloads and i
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py,ts,cs,dotnet,rust,react,nextjs,vue,angular,tailwind,postgres,docker&theme=dark" />
-    <img src="https://skillicons.dev/icons?i=py,ts,cs,dotnet,rust,react,nextjs,vue,angular,tailwind,postgres,docker&theme=light" alt="Python, TypeScript, C#, .NET, Rust, React, Next.js, Vue, Angular, Tailwind CSS, PostgreSQL, Docker" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Cts%2Ccs%2Cdotnet%2Crust%2Creact%2Cnextjs%2Cvue%2Cangular%2Ctailwind%2Cpostgres%2Cdocker&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=py%2Cts%2Ccs%2Cdotnet%2Crust%2Creact%2Cnextjs%2Cvue%2Cangular%2Ctailwind%2Cpostgres%2Cdocker&theme=light" alt="Python, TypeScript, C#, .NET, Rust, React, Next.js, Vue, Angular, Tailwind CSS, PostgreSQL, Docker" />
   </picture>
 </p>
 
