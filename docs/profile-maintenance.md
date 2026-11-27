@@ -70,6 +70,7 @@ The November 27 refresh made the profile more visual on purpose, while keeping t
 | Element | Source | Upkeep |
 | --- | --- | --- |
 | Animated banner, project cards, portfolio card | `scripts/build_profile_art.py` writes `assets/banner-*.svg`, `assets/cards/*.svg`, and `assets/portfolio-*.svg` | Edit the `TAGLINES` or `PROJECTS` lists and rerun `python3 scripts/build_profile_art.py`. Every image has a dark and light version swapped by `<picture>`. |
+| Laser Loon animation | `assets/src/laser-loon.svg` is the CC0 artwork from fderuiter/Laser_Loon. The script splits it into loon, fish, eye, and laser layers and writes `assets/laser-loon.svg` plus the Laser Loon card | If the source artwork changes, check the element ranges in `loon_parts()`. The script stops with an error if the element count changes. |
 | Portfolio screenshot | `assets/src/deruiter-home.webp`, copied from the deruiter.dev README assets | Replace the file and rerun the script when the home page changes. |
 | Badges and tech icons | shields.io and skillicons.dev, rendered when the page is viewed | None. If either service goes down, the alt text still reads correctly. |
 | Contribution snake | `.github/workflows/snake.yml` runs Platane/snk daily and publishes to the `output` branch | Needs Actions enabled with read and write workflow permissions. Run it once by hand after merging so the image exists. |

@@ -30,7 +30,7 @@ Most of my work runs in your browser, so the quickest way to see it is to go pla
 
 ## What I’m building
 
-Every card opens something you can try. No sign-ups.
+Every card opens something you can try or take. No sign-ups.
 
 <p align="center">
   <a href="https://fderuiter.github.io/cadence-clinical/demo/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/cadence-dark.svg" /><img src="assets/cards/cadence-light.svg" alt="Cadence: one clinical kernel holds the truth, and EDC, CTMS and the rest are apps on it. Explore the staff demo." width="49%" /></picture></a>
@@ -42,7 +42,7 @@ Every card opens something you can try. No sign-ups.
 </p>
 <p align="center">
   <a href="https://fderuiter.github.io/imednet-toolkit/tutorials/quick_start.html"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/imednet-dark.svg" /><img src="assets/cards/imednet-light.svg" alt="imednet-toolkit: Python SDK and CLI for the iMednet API, live in the browser with Pyodide. Run the live tutorial." width="49%" /></picture></a>
-  <a href="https://equipose.org"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/equipose-dark.svg" /><img src="assets/cards/equipose-light.svg" alt="Equipose: stratified block randomization, exported to R, Python, SAS and Stata. Design a schema." width="49%" /></picture></a>
+  <a href="https://github.com/fderuiter/Laser_Loon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/laser-loon-dark.svg" /><img src="assets/cards/laser-loon-light.svg" alt="Laser Loon: a loon with laser eyes, designed for the Minnesota state flag and given to the public domain. Grab the artwork." width="49%" /></picture></a>
 </p>
 
 ### The longer version
@@ -95,12 +95,12 @@ An unofficial Python SDK and CLI for the iMednet EDC API. It has typed wrappers 
 </details>
 
 <details>
-<summary><b>Equipose</b>: randomization schemas for clinical trials</summary>
+<summary><b>Laser Loon</b>: my entry for the Minnesota flag redesign</summary>
 <br />
 
-Equipose designs, simulates, and exports stratified block randomization for RTSM and IRT setups. It handles custom ratios like 2:1 or 3:1:1, variable block sizes, and caps per stratum. It exports matching R, Python, SAS, and Stata scripts that reproduce the same allocation from the same seed. It runs entirely in your browser, so your trial design never leaves your machine.
+For Minnesota’s state flag redesign, I drew the state bird, a loon, firing lasers from its eye at a fish. It was inspired by New Zealand’s laser kiwi flag. I released the artwork under CC0, so anyone can use, change, or sell it without asking or crediting me. The repository has SVG, PNG, PDF, EPS, AI, and PSD files. You can buy it as a real flag from [Flags for Good](https://flagsforgood.com/products/laser-loon-minnesota-flag), where the proceeds go to charity and I get nothing. It’s also a cabinet in my [arcade](https://deruiter.dev/arcade).
 
-**[Design a schema →](https://equipose.org)** · [Source](https://github.com/fderuiter/equipose-randomization)
+**[Grab the artwork →](https://github.com/fderuiter/Laser_Loon)** · [Play it in the arcade](https://deruiter.dev/arcade) · [Buy the flag](https://flagsforgood.com/products/laser-loon-minnesota-flag)
 </details>
 
 **[Browse everything else, including the Lean, Flipper Zero, and clinical standards experiments →](PROJECTS.md)**
@@ -117,6 +117,10 @@ Equipose designs, simulates, and exports stratified block randomization for RTSM
 I care about usable interfaces, clear rules, and tests that catch something. If a result only exists in a simulation, I want that written next to the result.
 
 ## A bit more me
+
+<p align="center">
+  <a href="https://github.com/fderuiter/Laser_Loon"><img src="assets/laser-loon.svg" alt="Laser Loon: a loon on a blue Minnesota flag fires yellow laser beams from its eye at a startled fish." width="80%" /></a>
+</p>
 
 I created [Laser Loon](https://github.com/fderuiter/Laser_Loon) for Minnesota’s flag redesign and put the artwork in the public domain. The lasers were my contribution to the discussion.
 
