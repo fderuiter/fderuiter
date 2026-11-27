@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+  <title id="title">Fred de Ruiter: clinical data, useful software, curious side projects.</title>
+  <desc id="desc">Banner that types three lines in turn: I build software for clinical research. I make complicated things usable. I put lasers on a loon once. On purpose.</desc>
+  <style>
+    @keyframes type0 { 0% { transform: scaleX(0); } 0.00% { transform: scaleX(0); animation-timing-function: steps(39, end); } 13.33% { transform: scaleX(1); } 27.50% { transform: scaleX(1); animation-timing-function: steps(39, end); } 31.67% { transform: scaleX(0); } 100% { transform: scaleX(0); } }@keyframes caret0 { 0% { transform: translateX(0); opacity: 0; } 0.00% { transform: translateX(0); opacity: 1; animation-timing-function: steps(39, end); } 13.33% { transform: translateX(553.8px); opacity: 1; } 27.50% { transform: translateX(553.8px); opacity: 1; animation-timing-function: steps(39, end); } 31.67% { transform: translateX(0); opacity: 1; } 31.68% { opacity: 0; } 100% { opacity: 0; } }.clip0 { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: type0 12.0s infinite; }.caret0 { opacity: 0; animation: caret0 12.0s infinite; } @media (prefers-reduced-motion: reduce) { .clip0 { transform: scaleX(1); } .caret0 { opacity: 1; transform: translateX(553.8px); } } @keyframes type1 { 0% { transform: scaleX(0); } 33.33% { transform: scaleX(0); animation-timing-function: steps(33, end); } 46.67% { transform: scaleX(1); } 60.83% { transform: scaleX(1); animation-timing-function: steps(33, end); } 65.00% { transform: scaleX(0); } 100% { transform: scaleX(0); } }@keyframes caret1 { 0% { transform: translateX(0); opacity: 0; } 33.32% { transform: translateX(0); opacity: 0; } 33.33% { transform: translateX(0); opacity: 1; animation-timing-function: steps(33, end); } 46.67% { transform: translateX(468.6px); opacity: 1; } 60.83% { transform: translateX(468.6px); opacity: 1; animation-timing-function: steps(33, end); } 65.00% { transform: translateX(0); opacity: 1; } 65.01% { opacity: 0; } 100% { opacity: 0; } }.clip1 { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: type1 12.0s infinite; }.caret1 { opacity: 0; animation: caret1 12.0s infinite; } @keyframes type2 { 0% { transform: scaleX(0); } 66.67% { transform: scaleX(0); animation-timing-function: steps(40, end); } 80.00% { transform: scaleX(1); } 94.17% { transform: scaleX(1); animation-timing-function: steps(40, end); } 98.33% { transform: scaleX(0); } 100% { transform: scaleX(0); } }@keyframes caret2 { 0% { transform: translateX(0); opacity: 0; } 66.66% { transform: translateX(0); opacity: 0; } 66.67% { transform: translateX(0); opacity: 1; animation-timing-function: steps(40, end); } 80.00% { transform: translateX(568.0px); opacity: 1; } 94.17% { transform: translateX(568.0px); opacity: 1; animation-timing-function: steps(40, end); } 98.33% { transform: translateX(0); opacity: 1; } 98.34% { opacity: 0; } 100% { opacity: 0; } }.clip2 { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: type2 12.0s infinite; }.caret2 { opacity: 0; animation: caret2 12.0s infinite; } @media (prefers-reduced-motion: reduce) { .pulse, .spin { animation: none !important; } }
+    @keyframes pulse { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+    .pulse { animation: pulse 3s ease-in-out infinite; }
+    .pulse.b { animation-delay: 1s; } .pulse.c { animation-delay: 2s; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spin { transform-box: view-box; transform-origin: 1060px 140px; animation: spin 40s linear infinite; }
+  </style>
+  <rect x="0.5" y="0.5" width="1199" height="279" rx="20" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="48" y="62" width="8" height="150" rx="4" fill="#b45309"/>
+  <text x="82" y="84" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3" fill="#b45309">CLINICAL DATA · USEFUL SOFTWARE · MINNEAPOLIS</text>
+  <text x="80" y="138" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="50" font-weight="800" fill="#18181b">Howdy, I’m Fred de Ruiter.</text>
+  <clipPath id="c0"><rect class="clip0" x="82" y="152" width="557.8" height="36"/></clipPath><text clip-path="url(#c0)" x="82" y="178" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="27" textLength="553.8" lengthAdjust="spacingAndGlyphs" fill="#18181b">I build software for clinical research.</text><rect class="caret0" x="85" y="154" width="13" height="30" fill="#b45309"/><clipPath id="c1"><rect class="clip1" x="82" y="152" width="472.6" height="36"/></clipPath><text clip-path="url(#c1)" x="82" y="178" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="27" textLength="468.6" lengthAdjust="spacingAndGlyphs" fill="#18181b">I make complicated things usable.</text><rect class="caret1" x="85" y="154" width="13" height="30" fill="#b45309"/><clipPath id="c2"><rect class="clip2" x="82" y="152" width="572.0" height="36"/></clipPath><text clip-path="url(#c2)" x="82" y="178" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="27" textLength="568.0" lengthAdjust="spacingAndGlyphs" fill="#18181b">I put lasers on a loon once. On purpose.</text><rect class="caret2" x="85" y="154" width="13" height="30" fill="#b45309"/>
+  <text x="82" y="236" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" fill="#52525b">deruiter.dev  ·  Python · TypeScript · C# · Rust</text>
+  <g class="spin" fill="none" stroke="#b45309" stroke-width="2" opacity=".55">
+    <circle cx="1060" cy="140" r="92" stroke-dasharray="4 10"/>
+  </g>
+  <g fill="none" stroke="#b45309" stroke-width="3">
+    <circle cx="1060" cy="140" r="26"/>
+    <path d="M1060 114V72M1060 166v42M1034 140h-42M1086 140h42" stroke-opacity=".5"/>
+  </g>
+  <g fill="#b45309">
+    <circle class="pulse" cx="1060" cy="64" r="9"/>
+    <circle class="pulse b" cx="1136" cy="140" r="9"/>
+    <circle class="pulse c" cx="1060" cy="216" r="9"/>
+    <circle class="pulse b" cx="984" cy="140" r="9"/>
+  </g>
+</svg>

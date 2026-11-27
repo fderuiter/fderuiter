@@ -50,7 +50,7 @@ The introduction uses public biographical material and project documentation. It
 
 ## Writing voice
 
-Keep the profile short enough to read in one sitting, around 500 words. Three projects get a short paragraph and a link to try them; everything else stays in a one-line table or in `PROJECTS.md`. Use direct first-person language, contractions, specific projects, and occasional dry asides. Let the humor come from Fred’s actual interests: Laser Loon, Ducky, Costco, and the unusual career route. Keep project descriptions factual and put the wider inventory in `PROJECTS.md`.
+Keep the visible profile short enough to skim: the cards carry the pitch, and each project's longer description sits in a collapsed `<details>` block. Everything else stays in `PROJECTS.md`. Use direct first-person language, contractions, specific projects, and occasional dry asides. Let the humor come from Fred’s actual interests: Laser Loon, Ducky, Costco, and the unusual career route. Keep project descriptions factual and put the wider inventory in `PROJECTS.md`.
 
 The November 16 rewrite draws on the structure, plain-language, and meaning-preservation ideas in [Lynote’s rewriting techniques](https://github.com/lynote-ai/humanize-text/blob/main/docs/techniques.md). Those ideas were applied directly during editing; the external API and translation pipeline was not run. No detector score was used as a quality claim.
 
@@ -61,6 +61,17 @@ The November 16 rewrite draws on the structure, plain-language, and meaning-pres
 - Keep research, preview, beta, and device-validation limitations attached to the relevant project.
 - When a repository becomes private or moves, update or remove its public link.
 - Review the guide and suggested pins when the main focus of the work changes.
-- Keep the banner self-contained: SVG only, with no scripts, external fonts, or remote assets. The text introduction must remain understandable if images do not load.
+- Keep the generated art self-contained: SVG only, with no scripts, web fonts, or remote assets, and CSS animations that stop for viewers who prefer reduced motion. The text must still make sense if images do not load, so every image has full alt text.
 
-The profile intentionally has no activity scraper, scheduled workflow, tracking badge, external statistics image, or generated feed to maintain. The banner comes in two versions, `assets/profile-banner-dark.svg` and `assets/profile-banner-light.svg`, swapped by a `<picture>` element so it matches the viewer’s GitHub theme. Change both together.
+## Visual elements
+
+The November 27 refresh made the profile more visual on purpose, while keeping the parts that need upkeep small:
+
+| Element | Source | Upkeep |
+| --- | --- | --- |
+| Animated banner, project cards, portfolio card | `scripts/build_profile_art.py` writes `assets/banner-*.svg`, `assets/cards/*.svg`, and `assets/portfolio-*.svg` | Edit the `TAGLINES` or `PROJECTS` lists and rerun `python3 scripts/build_profile_art.py`. Every image has a dark and light version swapped by `<picture>`. |
+| Portfolio screenshot | `assets/src/deruiter-home.webp`, copied from the deruiter.dev README assets | Replace the file and rerun the script when the home page changes. |
+| Badges and tech icons | shields.io and skillicons.dev, rendered when the page is viewed | None. If either service goes down, the alt text still reads correctly. |
+| Contribution snake | `.github/workflows/snake.yml` runs Platane/snk daily and publishes to the `output` branch | Needs Actions enabled with read and write workflow permissions. Run it once by hand after merging so the image exists. |
+
+Stats cards and streak counters were left out. The public instances are often rate-limited and show broken images, and the live demos say more about the work than commit counts do.
