@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="0 0 600 320" role="img" aria-labelledby="title">
+  <title id="title">QRCraftly: Styled QR codes that still scan. No ads, no tracking, no sign-up. Make a QR code.</title>
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%, 100% { opacity: .3; } 50% { opacity: 1; } }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    @keyframes tilt { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+    .spin { animation: spin 24s linear infinite; }
+    .pulse { animation: pulse 2.4s ease-in-out infinite; }
+    .blink { animation: blink 1.1s step-end infinite; }
+    .tilt { animation: tilt 5s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <rect x="1" y="1" width="598" height="318" rx="18" fill="#0f1218" stroke="#2a313c" stroke-width="2"/>
+  <rect x="1" y="1" width="598" height="6" rx="3" fill="#22d3ee"/>
+  <text x="32" y="58" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2.5" fill="#22d3ee">BROWSER QR STUDIO</text>
+  <text x="30" y="104" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" font-weight="800" fill="#f4f4f5">QRCraftly</text>
+  <rect x="473" y="39" width="26" height="26" rx="4" fill="none" stroke="#22d3ee" stroke-width="5"/><rect x="481" y="47" width="10" height="10" rx="2" fill="#22d3ee"/><rect x="529" y="39" width="26" height="26" rx="4" fill="none" stroke="#22d3ee" stroke-width="5"/><rect x="537" y="47" width="10" height="10" rx="2" fill="#22d3ee"/><rect x="473" y="95" width="26" height="26" rx="4" fill="none" stroke="#22d3ee" stroke-width="5"/><rect x="481" y="103" width="10" height="10" rx="2" fill="#22d3ee"/><rect x="530" y="96" width="9" height="9" rx="1.5" fill="#22d3ee"/><rect class="pulse" x="546" y="96" width="9" height="9" rx="1.5" fill="#22d3ee"/><rect x="538" y="108" width="9" height="9" rx="1.5" fill="#22d3ee"/><rect class="pulse" x="530" y="120" width="9" height="9" rx="1.5" fill="#22d3ee"/><rect x="554" y="112" width="9" height="9" rx="1.5" fill="#22d3ee"/><rect class="pulse" x="546" y="124" width="9" height="9" rx="1.5" fill="#22d3ee"/>
+  <text x="32" y="148" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#a1a1aa">Styled QR codes that still scan.</text><text x="32" y="176" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#a1a1aa">No ads, no tracking, no sign-up.</text>
+  <rect x="32" y="214" width="95" height="30" rx="15" fill="#1f2530" stroke="#2a313c"/><text x="79.5" y="234" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#d4d4d8">React 19</text><rect x="135" y="214" width="112" height="30" rx="15" fill="#1f2530" stroke="#2a313c"/><text x="191.0" y="234" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#d4d4d8">TypeScript</text><rect x="255" y="214" width="121" height="30" rx="15" fill="#1f2530" stroke="#2a313c"/><text x="315.5" y="234" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#d4d4d8">Rust → WASM</text>
+  <path d="M32 268H568" stroke="#232934"/>
+  <text x="32" y="298" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#22d3ee">Make a QR code  →</text>
+</svg>

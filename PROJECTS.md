@@ -9,10 +9,10 @@ My public work spans clinical research, web applications, developer tools, mathe
 | Project | What you’ll find |
 | --- | --- |
 | [Cadence](https://github.com/fderuiter/cadence-clinical) | A pre-release operating system for clinical research in .NET 10 and Vue: one clinical kernel, with EDC, site readiness, randomization, and other products built as applications on it. [Try the staff demo](https://fderuiter.github.io/cadence-clinical/demo/) with synthetic data. Not validated for real trials. |
-| [imednet-toolkit](https://github.com/fderuiter/imednet-toolkit) | Unofficial Python SDK, CLI, typed API wrappers, and helper workflows for iMednet. |
+| [imednet-toolkit](https://github.com/fderuiter/imednet-toolkit) | Unofficial Python SDK, CLI, typed API wrappers, and helper workflows for iMednet. [Docs](https://fderuiter.github.io/imednet-toolkit/) with live Pyodide tutorials; `pip install imednet`. |
 | [CRF.xl](https://github.com/fderuiter/CRF.xl) | Excel-based case report form authoring, metadata validation, Word generation, and CDISC ODM export. |
 | [Equipose](https://github.com/fderuiter/equipose-randomization) | Browser-based stratified block randomization design, simulation, and export. [Open the app](https://equipose.org). |
-| [clintrials](https://github.com/fderuiter/clintrials) | Python implementations of clinical trial designs and simulation methods, including early-phase oncology designs. |
+| [clintrials](https://github.com/fderuiter/clintrials) | Python implementations of clinical trial designs and simulation methods, including early-phase oncology designs. [Docs](https://fderuiter.github.io/clintrials/). |
 | [protocol_to_crf_generator](https://github.com/fderuiter/protocol_to_crf_generator) | A protocol-to-CRF toolchain in development, exploring structured clinical form artifacts. |
 | [iMedBest](https://github.com/fderuiter/iMedBest) | A Django project exploring clinical metadata and storage separation. Start with its README and development setup. |
 | [imednet-openapi-spec](https://github.com/fderuiter/imednet-openapi-spec) | A machine-readable OpenAPI description of the iMednet EDC API. |
@@ -26,7 +26,7 @@ For a hands-on introduction, the [clinical journey on my portfolio](https://deru
 | --- | --- |
 | [QRCraftly-web](https://github.com/fderuiter/QRCraftly-web) | QR generation, styling, scanning, and checking in the browser, plus beta optical file transfer. [Open the app](https://qrcraftly.com). Advanced transfer speeds remain simulation results pending device measurements. |
 | [deruiter.dev](https://github.com/fderuiter/deruiter.dev) | My portfolio source, clinical demos, interactive labs, and [browser games](https://deruiter.dev/arcade). |
-| [sortify](https://github.com/fderuiter/sortify) | A local document organizer with rule-based routing, content clustering, dry runs, and undo. Currently run from source; its README reports no published release yet. |
+| [sortify](https://github.com/fderuiter/sortify) | A local document organizer with rule-based routing, content clustering, dry runs, and undo. Currently run from source; its README reports no published release yet. [Project site](https://fderuiter.github.io/sortify/). |
 | [wedding_website](https://github.com/fderuiter/wedding_website) | A self-hostable wedding website and registry: invitation-code RSVPs, seating charts, guest photo moderation, group gifting, and scheduled broadcasts. [Tour the demo](https://fderuiter.github.io/wedding_website/demo/). |
 | [sharepoint_upload_cleaning](https://github.com/fderuiter/sharepoint_upload_cleaning) | A Python filename cleaner for preparing SharePoint uploads. |
 
@@ -35,9 +35,9 @@ For a hands-on introduction, the [clinical journey on my portfolio](https://deru
 | Project | What you’ll find |
 | --- | --- |
 | [fred-skills](https://github.com/fderuiter/fred-skills) | Experimental repository audits, investigation, planning, remediation, and verification workflows. |
-| [agy-skills](https://github.com/fderuiter/agy-skills) | Engineering skills adapted for Google Antigravity, derived from Matt Pocock’s skills. See the repository for attribution. |
-| [DuckDeploy](https://github.com/fderuiter/DuckDeploy) | An API-first React/Vite/TypeScript template using OpenAPI-generated clients and UI metadata. |
-| [Hono-Kiln](https://github.com/fderuiter/Hono-Kiln) | A Hono/Bun API starter with module scaffolding, authentication, database integration, and OpenAPI documentation. |
+| [agy-skills](https://github.com/fderuiter/agy-skills) | Engineering skills adapted for Google Antigravity, derived from Matt Pocock’s skills. See the repository for attribution. [Project site](https://fderuiter.github.io/agy-skills/). |
+| [DuckDeploy](https://github.com/fderuiter/DuckDeploy) | An API-first React/Vite/TypeScript template using OpenAPI-generated clients and UI metadata. [Project site](https://fderuiter.github.io/DuckDeploy/). |
+| [Hono-Kiln](https://github.com/fderuiter/Hono-Kiln) | A Hono/Bun API starter with module scaffolding, authentication, database integration, and OpenAPI documentation. [Project site](https://fderuiter.github.io/Hono-Kiln/). |
 | [openAPI-Generator](https://github.com/fderuiter/openAPI-Generator) | A template for validating OpenAPI specifications and generating documentation and clients through GitHub Actions. |
 
 ## Mathematics and research experiments
@@ -48,7 +48,7 @@ For a hands-on introduction, the [clinical journey on my portfolio](https://deru
 | [quasiperfect](https://github.com/fderuiter/quasiperfect) | Lean 4 formalization, a Rust search prototype, Python tooling, and research notes on quasiperfect numbers. Selected arithmetic routines have proof bridges; the search is incomplete and does not settle the open problem. |
 | [JIBLM DIY Intro Number Theory](https://github.com/fderuiter/JIBLM_DIY_INTRO_NUMBER_THEORY) | Learning Lean by formalizing exercises from an inquiry-based number theory text. |
 | [Arithmetic dynamical systems](https://github.com/fderuiter/Asymptotic-Density-of-Attracting-Sets-in-Generalized-Arithmetic-Dynamical-Systems) | Exploratory Lean and mathematical writing on generalized arithmetic dynamical systems. Treat the repository’s broader research claims as claims to examine, rather than established results. |
-| [lambda-wave](https://github.com/fderuiter/lambda-wave) | Research code and design documentation exploring mmWave radar for patient-motion tracking during radiotherapy. Inclusion here does not establish clinical validation, regulatory clearance, or measured hardware performance. |
+| [lambda-wave](https://github.com/fderuiter/lambda-wave) | Research code and design documentation exploring mmWave radar for patient-motion tracking during radiotherapy. Inclusion here does not establish clinical validation, regulatory clearance, or measured hardware performance. [Project site](https://fderuiter.github.io/lambda-wave/). |
 
 ## Flipper Zero
 
