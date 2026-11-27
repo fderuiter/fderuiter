@@ -30,7 +30,7 @@ Most of my work runs in your browser, so the quickest way to see it is to go pla
 
 ## What I’m building
 
-Every card opens something you can try or take. No sign-ups.
+Every card opens something you can try or read. No sign-ups.
 
 <p align="center">
   <a href="https://fderuiter.github.io/cadence-clinical/demo/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/cadence-dark.svg" /><img src="assets/cards/cadence-light.svg" alt="Cadence: one clinical kernel holds the truth, and EDC, CTMS and the rest are apps on it. Explore the staff demo." width="49%" /></picture></a>
@@ -42,7 +42,7 @@ Every card opens something you can try or take. No sign-ups.
 </p>
 <p align="center">
   <a href="https://fderuiter.github.io/imednet-toolkit/tutorials/quick_start.html"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/imednet-dark.svg" /><img src="assets/cards/imednet-light.svg" alt="imednet-toolkit: Python SDK and CLI for the iMednet API, live in the browser with Pyodide. Run the live tutorial." width="49%" /></picture></a>
-  <a href="https://github.com/fderuiter/Laser_Loon"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/laser-loon-dark.svg" /><img src="assets/cards/laser-loon-light.svg" alt="Laser Loon: a loon with laser eyes, designed for the Minnesota state flag and given to the public domain. Grab the artwork." width="49%" /></picture></a>
+  <a href="https://fderuiter.github.io/sortify/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/sortify-dark.svg" /><img src="assets/cards/sortify-light.svg" alt="Sortify: point it at a messy folder and it reads each file and sorts it, offline, with a dry run and undo. See how it sorts." width="49%" /></picture></a>
 </p>
 
 ### The longer version
@@ -95,12 +95,12 @@ An unofficial Python SDK and CLI for the iMednet EDC API. It has typed wrappers 
 </details>
 
 <details>
-<summary><b>Laser Loon</b>: my entry for the Minnesota flag redesign</summary>
+<summary><b>Sortify</b>: a messy folder in, a tidy folder tree out</summary>
 <br />
 
-For Minnesota’s state flag redesign, I drew the state bird, a loon, firing lasers from its eye at a fish. It was inspired by New Zealand’s laser kiwi flag. I released the artwork under CC0, so anyone can use, change, or sell it without asking or crediting me. The repository has SVG, PNG, PDF, EPS, AI, and PSD files. You can buy it as a real flag from [Flags for Good](https://flagsforgood.com/products/laser-loon-minnesota-flag), where the proceeds go to charity and I get nothing. It’s also a cabinet in my [arcade](https://deruiter.dev/arcade).
+Sortify is a local document organizer. Point it at a folder like Downloads and it pulls the text out of each file, including Office documents, PDFs, email, spreadsheets, and (optionally) images and audio. Your own rules get the first say, then it groups whatever is left by content and names the folders after what is in them. Before anything moves, a dry run checks the plan for collisions. Every move is journaled, so `undo` puts things back. It works offline, keeps its index in an encrypted local database, and comes with a terminal UI, a CLI, and a folder-watching daemon. It also ships with a plugin for clinical TMF and ISF filing rules. No release yet, so for now it runs from source.
 
-**[Grab the artwork →](https://github.com/fderuiter/Laser_Loon)** · [Play it in the arcade](https://deruiter.dev/arcade) · [Buy the flag](https://flagsforgood.com/products/laser-loon-minnesota-flag)
+**[See how it sorts →](https://fderuiter.github.io/sortify/)** · [Source](https://github.com/fderuiter/sortify)
 </details>
 
 **[Browse everything else, including the Lean, Flipper Zero, and clinical standards experiments →](PROJECTS.md)**
@@ -119,10 +119,10 @@ I care about usable interfaces, clear rules, and tests that catch something. If 
 ## A bit more me
 
 <p align="center">
-  <a href="https://github.com/fderuiter/Laser_Loon"><img src="assets/laser-loon.svg" alt="Laser Loon: a loon on a blue Minnesota flag fires yellow laser beams from its eye at a startled fish." width="80%" /></a>
+  <a href="https://deruiter.dev/arcade"><img src="assets/laser-loon.svg" alt="Laser Loon: a loon on a blue Minnesota flag fires yellow laser beams from its eye at a startled fish." width="80%" /></a>
 </p>
 
-I created [Laser Loon](https://github.com/fderuiter/Laser_Loon) for Minnesota’s flag redesign and put the artwork in the public domain. The lasers were my contribution to the discussion.
+That’s Laser Loon, which I drew for Minnesota’s flag redesign and put in the public domain. The lasers were my contribution to the discussion. It’s also a game in my [arcade](https://deruiter.dev/arcade).
 
 Outside of that: ski patrol, Magic: The Gathering, Costco, and **Ducky**, my golden retriever and least productive collaborator. There’s a game about our Costco wedding on the portfolio. That probably explains enough.
 

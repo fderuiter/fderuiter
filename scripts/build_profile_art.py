@@ -268,11 +268,11 @@ PROJECTS = [
         "cta": "Run the live tutorial", "glyph": "terminal",
     },
     {
-        "slug": "laser-loon", "accent": ("#facc15", "#0156d9"),
-        "label": "MINNESOTA FLAG REDESIGN", "name": "Laser Loon",
-        "hook": ["A loon with laser eyes, designed for the", "state flag and given to the public domain."],
-        "chips": ["CC0 1.0", "SVG · PNG · AI", "Arcade game"],
-        "cta": "Grab the artwork", "glyph": "loon",
+        "slug": "sortify", "accent": ("#4ade80", "#15803d"),
+        "label": "OFFLINE FILE ORGANIZER", "name": "Sortify",
+        "hook": ["Point it at a messy folder. It reads each file", "and sorts it, offline, with a dry run and undo."],
+        "chips": ["Python", "Textual", "scikit-learn", "SQLCipher"],
+        "cta": "See how it sorts", "glyph": "folders",
     },
 ]
 
@@ -314,10 +314,14 @@ def glyph(kind: str, c: str) -> str:
                 f'<g class="tilt" style="transform-origin:512px 58px">'
                 f'<path d="M470 58l-14 30h28zM554 58l-14 30h28z" fill="none" stroke="{c}" stroke-width="3.5" stroke-linejoin="round"/></g>'
                 f'<circle cx="512" cy="42" r="6" fill="{c}"/>')
-    if kind == "loon":
-        return (f'<defs><clipPath id="mini"><rect width="1920" height="1080" rx="90"/></clipPath></defs>'
-                f'<svg x="400" y="30" width="170" height="96" viewBox="0 0 1920 1080">'
-                f'<g clip-path="url(#mini)">{loon_scene(ripples=False)}</g></svg>')
+    if kind == "folders":
+        docs = "".join(
+            f'<g class="drop d{k}"><rect x="{x}" y="22" width="20" height="26" rx="3" fill="none" stroke="{c}" stroke-width="3"/>'
+            f'<path d="M{x + 5} 31h10M{x + 5} 38h7" stroke="{c}" stroke-width="2.5" stroke-linecap="round"/></g>'
+            for k, x in enumerate((476, 502, 528))
+        )
+        return (docs +
+                f'<path d="M462 72h30l8 9h52a6 6 0 0 1 6 6v34a6 6 0 0 1-6 6H468a6 6 0 0 1-6-6z" fill="{c}" fill-opacity=".18" stroke="{c}" stroke-width="4" stroke-linejoin="round"/>')
     raise ValueError(kind)
 
 
@@ -344,7 +348,9 @@ def card(p: dict, theme: str) -> str:
     .pulse {{ animation: pulse 2.4s ease-in-out infinite; }}
     .blink {{ animation: blink 1.1s step-end infinite; }}
     .tilt {{ animation: tilt 5s ease-in-out infinite; }}
-    {LOON_CSS if p["glyph"] == "loon" else ""}
+    @keyframes drop {{ 0%, 10% {{ transform: translateY(0); opacity: 1; }} 30% {{ transform: translateY(58px); opacity: 0; }}
+      31%, 60% {{ transform: translateY(0); opacity: 0; }} 75%, 100% {{ transform: translateY(0); opacity: 1; }} }}
+    .drop {{ animation: drop 3.6s ease-in infinite; }} .d1 {{ animation-delay: .5s; }} .d2 {{ animation-delay: 1s; }}
     {REDUCED_MOTION}
   </style>
   <rect x="1" y="1" width="598" height="318" rx="18" fill="{t["bg"]}" stroke="{t["border"]}" stroke-width="2"/>
